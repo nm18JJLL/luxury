@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AUTHENTIX — Home</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html"><img src="images/YOUR-LOGO.png" alt="AUTHENTIX logo" class="logo"></a>
+    <h1 class="site-title">LuxuryXLegitimacy</h1>
+    <div class="search-wrapper">
+      <input id="searchBox" placeholder="Search colognes..." autocomplete="off">
+      <div id="autocomplete" class="autocomplete"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="hero-about" class="about">
+    <h2>About AUTHENTIX</h2>
+    <p class="about-text">
+      AUTHENTIX is a discounted luxury accessory service for men. Founded in 2025, we hope to expand quickly and provide high-quality products at unbeatable prices.
+    </p>
+    <img src="images/about-placeholder.jpg" alt="About image" class="about-image">
+  </section>
+
+  <section id="results-section" class="results hidden">
+    <div id="resultsGrid" class="grid"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <nav class="footer-nav">
+    <a href="faq.html">FAQ</a>
+    <a href="account.html">Create Account</a>
+    <a href="customer.html">Customer Service</a>
+  </nav>
+  <p class="copyright">© AUTHENTIX 2025</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // initialize home behavior
+  initSearchUI({ hideAboutOnSearch: true, resultContainerId: 'resultsGrid', resultsSectionId: 'results-section' });
+</script>
+</body>
+</html>
