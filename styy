@@ -1,0 +1,98 @@
+:root{
+  --primary:#ffffff;
+  --navy:#0c1424;
+  --blue:#4b6cb7;
+  --muted:#e7ecf8;
+  --text:#111a2d;
+  --soft:#8894ad;
+}
+
+/* Basic reset */
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family: 'Roboto', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background:var(--primary);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Header */
+.site-header{
+  padding:48px 20px 32px;
+  text-align:center;
+}
+.header-inner{max-width:1100px;margin:0 auto}
+.logo{width:220px;display:block;margin:0 auto 18px}
+.site-title{font-family:'Alegreya', serif;font-size:34px;color:var(--navy);margin-bottom:18px}
+
+/* Search */
+.search-wrapper{position:relative;max-width:620px;margin:0 auto}
+#searchBox{
+  width:100%;
+  padding:16px 20px;
+  font-size:18px;
+  text-align:center;
+  border-radius:12px;
+  border:2px solid var(--blue);
+  background: #fbfcff;
+  transition:box-shadow .25s, border-color .25s, transform .12s;
+}
+#searchBox:focus{outline:none;border-color:var(--navy);box-shadow:0 8px 30px rgba(75,108,183,0.12)}
+.autocomplete{
+  position:absolute;left:0;right:0;top:calc(100% + 8px);
+  background:white;border-radius:10px;box-shadow:0 10px 30px rgba(18,36,80,0.08);
+  display:none;max-height:240px;overflow:auto;border:1px solid #eef2ff;z-index:25
+}
+.autocomplete .item{padding:12px 16px;cursor:pointer;font-family:'Times New Roman', serif}
+.autocomplete .item:hover{background:var(--muted)}
+
+/* About / hero */
+.about{max-width:980px;margin:56px auto 24px;padding:40px 20px;text-align:center}
+.about h2{font-family:'Alegreya', serif;font-size:32px;color:var(--navy);margin-bottom:14px}
+.about p{font-family:'Times New Roman', serif;font-size:18px;color:var(--soft);margin:0 auto;max-width:760px}
+.about-image{max-width:520px;margin:24px auto 0;display:block;border-radius:12px;}
+
+/* Results grid (home uses this) */
+.results{max-width:1200px;margin:48px auto;padding:0 20px;transition:opacity .35s, transform .35s}
+.grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:44px}
+.product-card{background:linear-gradient(180deg,#ffffff,#fbfbff);border-radius:16px;padding:26px;border:1px solid #eef3ff;text-align:center;transition:transform .25s,box-shadow .25s;}
+.product-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(12,18,36,0.08)}
+.product-card img{width:180px;height:200px;object-fit:cover;border-radius:12px;margin-bottom:14px}
+.product-card h3{font-family:'Alegreya', serif;font-size:20px;color:var(--navy);margin-bottom:8px}
+.product-card .my-price{font-family:'Times New Roman', serif;font-size:22px;color:var(--blue);font-weight:700;margin-bottom:6px}
+.product-card .retail{font-size:15px;color:var(--soft)}
+
+/* Product page */
+.product-page{max-width:1000px;margin:50px auto;padding:20px}
+.product-wrap{display:flex;gap:40px;align-items:flex-start}
+.product-photo{flex:1;display:flex;align-items:center;justify-content:center}
+.product-photo img{width:360px;height:380px;object-fit:cover;border-radius:14px}
+.product-info{flex:1}
+.product-info h2{font-family:'Alegreya', serif;font-size:32px;color:var(--navy);margin-bottom:10px}
+.info-row{background:#fbfbff;border:1px solid #eef4ff;padding:18px;border-radius:12px;margin-bottom:18px}
+.info-row .label{font-weight:700;color:var(--soft);display:block;font-size:14px}
+.info-row .value{font-size:20px;margin-top:6px;font-family:'Times New Roman', serif;font-weight:700;color:var(--text)}
+.buy-btn{display:inline-block;padding:12px 22px;border-radius:10px;background:var(--blue);color:white;text-decoration:none;font-weight:700;transition:transform .12s}
+.buy-btn:hover{transform:translateY(-3px)}
+
+/* Footer */
+.site-footer{background:var(--navy);color:white;padding:36px 20px;margin-top:80px;text-align:center}
+.footer-nav a{color:rgba(255,255,255,0.9);margin:8px 12px;text-decoration:none;font-weight:700}
+.footer-nav a:hover{text-decoration:underline}
+
+/* Utilities */
+.hidden{display:none}
+
+/* Responsive */
+@media (max-width:1000px){
+  .grid{grid-template-columns:repeat(2, 1fr);gap:28px}
+  .product-wrap{flex-direction:column}
+  .product-photo img{width:100%;height:auto}
+}
+@media (max-width:640px){
+  .grid{grid-template-columns:1fr;gap:22px}
+  .logo{width:180px}
+  .site-title{font-size:26px}
+  #searchBox{font-size:16px;padding:14px}
+}
