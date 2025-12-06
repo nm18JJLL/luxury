@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Customer Service — AUTHENTIX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html"><img src="images/YOUR-LOGO.png" class="logo"></a>
+    <h1 class="site-title">Customer Service</h1>
+  </div>
+</header>
+
+<main style="max-width:900px;margin:40px auto;padding:0 16px;">
+  <section>
+    <p style="color:var(--soft);">For assistance, email <strong>support@authentix.com</strong> or call 1-800-AUTHENTIX (demo).</p>
+    <h3 style="margin-top:18px">Contact form</h3>
+    <form id="contactForm" style="margin-top:12px">
+      <input placeholder="Email" style="padding:10px;border-radius:8px;border:1px solid #dfe7f8;width:100%;margin-bottom:10px"><br>
+      <textarea placeholder="How can we help?" rows="6" style="width:100%;padding:12px;border-radius:8px;border:1px solid #dfe7f8"></textarea><br>
+      <button style="margin-top:12px;padding:10px 16px;background:var(--blue);color:white;border:none;border-radius:8px;font-weight:700">Send</button>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer"><nav class="footer-nav"><a href="index.html">Home</a></nav></footer>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', (e)=>{
+  e.preventDefault();
+  alert('Message sent (demo).');
+});
+</script>
+</body>
+</html>
