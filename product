@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AUTHENTIX — Product</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html"><img src="images/YOUR-LOGO.png" alt="AUTHENTIX logo" class="logo"></a>
+    <h1 class="site-title">LuxuryXLegitimacy</h1>
+    <div class="search-wrapper">
+      <input id="searchBox" placeholder="Search colognes..." autocomplete="off">
+      <div id="autocomplete" class="autocomplete"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="product-page" class="product-page">
+    <!-- Filled by JS -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <nav class="footer-nav">
+    <a href="faq.html">FAQ</a>
+    <a href="account.html">Create Account</a>
+    <a href="customer.html">Customer Service</a>
+  </nav>
+  <p class="copyright">© AUTHENTIX 2025</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // initialize search on product page and render product by id
+  initSearchUI({ hideAboutOnSearch: false, resultContainerId: null, resultsSectionId: null });
+
+  // Read ?id=slug and render product detail
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  if (id) {
+    renderProductDetail(id);
+  } else {
+    // optional: redirect back to home if no id
+    // window.location.href = 'index.html';
+  }
+</script>
+</body>
+</html>
