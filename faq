@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AUTHENTIX — FAQ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html"><img src="images/YOUR-LOGO.png" class="logo"></a>
+    <h1 class="site-title">FAQ</h1>
+  </div>
+</header>
+
+<main style="max-width:900px;margin:40px auto;padding:0 16px;">
+  <section>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)" style="cursor:pointer;padding:14px 0;border-bottom:1px solid #f0f2f7;font-weight:700">How do I place an order?</div>
+      <div class="faq-a" style="padding:12px 0;color:var(--soft)">You can search for a product and click Buy. (Edit this answer.)</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)" style="cursor:pointer;padding:14px 0;border-bottom:1px solid #f0f2f7;font-weight:700">Are products authentic?</div>
+      <div class="faq-a" style="padding:12px 0;color:var(--soft)">Yes — (edit as needed).</div>
+    </div>
+    <!-- Add more Q/A blocks -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <nav class="footer-nav"><a href="index.html">Home</a></nav>
+</footer>
+
+<script>
+function toggleFaq(el){
+  const a = el.nextElementSibling;
+  a.style.display = (a.style.display === 'block') ? 'none' : 'block';
+}
+</script>
+</body>
+</html>
